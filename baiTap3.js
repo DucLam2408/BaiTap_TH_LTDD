@@ -1,3 +1,4 @@
+// Coding Challenge #4
 const tip = (bill) => {
     return (bill >= 50 && bill <= 300) ? (bill + ((bill * 15) / 100)) : (bill + ((bill * 20) / 100));
 }

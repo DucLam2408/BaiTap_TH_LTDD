@@ -1,3 +1,4 @@
+// Coding Challenge #1&2
 const tinhBMI = (mass, height) => {
     return (mass / (height * height));
 }
@@ -14,10 +15,10 @@ const john = {
     mass2: 85,
     height2: 1.76
 }
-console.log("Chỉ số BMI của mark theo data 1 là: " + tinhBMI(mark.mass1, mark.height1))
-console.log("Chỉ số BMI của mark theo data 2 là: " + tinhBMI(mark.mass2, mark.height2))
-console.log("Chỉ số BMI của john theo data 1 là: " + tinhBMI(john.mass1, john.height1))
-console.log("Chỉ số BMI của john theo data 2 là: " + tinhBMI(john.mass2, john.height2))
+console.log("Chỉ số BMI của mark theo data 1 là: " + tinhBMI(mark.mass1, mark.height1).toFixed(2))
+console.log("Chỉ số BMI của mark theo data 2 là: " + tinhBMI(mark.mass2, mark.height2).toFixed(2))
+console.log("Chỉ số BMI của john theo data 1 là: " + tinhBMI(john.mass1, john.height1).toFixed(2))
+console.log("Chỉ số BMI của john theo data 2 là: " + tinhBMI(john.mass2, john.height2).toFixed(2))
 
 const soSanhBMI = (a, b) => {
     if (a > b) {
@@ -25,8 +26,10 @@ const soSanhBMI = (a, b) => {
     } else
         return false;
 }
-
-const markHigherBMI = soSanhBMI(tinhBMI(mark.mass1, mark.height1), tinhBMI(mark.mass2, mark.height2)) ?
-    "BMI của mark lớn hơn BMI của john" :
-    "BMI của mark không lớn hơn BMI của john";
+const bmiMark = tinhBMI(mark.mass1, mark.height1).toFixed(2);
+const bmiJohn = tinhBMI(mark.mass2, mark.height2).toFixed(2);
+const markHigherBMI = soSanhBMI(bmiMark, bmiJohn) ?
+    `BMI của mark(${bmiMark}) lớn hơn BMI của john(${bmiJohn})` :
+    `BMI của mark(${bmiMark}) không lớn hơn BMI của john(${bmiJohn})`;
 console.log(markHigherBMI);
+

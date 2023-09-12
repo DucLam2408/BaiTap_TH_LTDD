@@ -1,3 +1,4 @@
+// Coding Challenge #7
 const tinhBMIs = (a, b) => {
     return (a / (b * b));
 }

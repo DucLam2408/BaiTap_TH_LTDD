@@ -1,3 +1,4 @@
+// Coding Challenge #5
 const tinhDiemTB = (a, b, c) => {
     return (a + b + c) / 3;
 }
